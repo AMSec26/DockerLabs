@@ -1,7 +1,5 @@
 # DockerLabs
 
----
-
 ## Descargo de responsabilidad
 
 El contenido de este repositorio tiene fines **exclusivamente educativos y profesionales**.  
