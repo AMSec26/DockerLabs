@@ -17,7 +17,7 @@ ping 10.88.0.2
 nmap -sC -sV -oN firsthacking.txt 10.88.0.2
 ```
 
-![reconocimiento.png](L:\DockerLabs\firsthacking\GitHub\images\reconocimiento.png)
+![reconocimiento.png](.\images\reconocimiento.png)
 
 Con esto logramos identificar que tenemos abierto el puerto 21, por el cual corre el servicio de vsftp 2.3.4
 
@@ -33,11 +33,11 @@ Se realizo una búsqueda simple sobre el servicio vsftp 2.3.4 identificando la v
 
 [NVD - CVE-2011-2523](https://nvd.nist.gov/vuln/detail/CVE-2011-2523)
 
-![identificacion-01.png](L:\DockerLabs\firsthacking\GitHub\images\identificacion-01.png)
+![identificacion-01.png](.\images\identificacion-01.png)
 
-![identificacion-02.PNG](L:\DockerLabs\firsthacking\GitHub\images\identificacion-02.PNG)
+![identificacion-02.PNG](.\images\identificacion-02.PNG)
 
-![identificacion-03.PNG](L:\DockerLabs\firsthacking\GitHub\images\identificacion-03.PNG)
+![identificacion-03.PNG](.\images\identificacion-03.PNG)
 
 ---
 
@@ -45,11 +45,11 @@ Se realizo una búsqueda simple sobre el servicio vsftp 2.3.4 identificando la v
 
 Tras identificar que existe una vulnerabilidad y un exploit, procedemos a buscarlo en Metasploit para verificar si viene cargado.
 
-![explotacion-01.png](L:\DockerLabs\firsthacking\GitHub\images\explotacion-01.png)
+![explotacion-01.png](.\images\explotacion-01.png)
 
 Al ver que si se encuentra en la base de Metasploit procedemos a ejecutarlo para explotar la vulnerabilidad.
 
-![explotacion-02.png](L:\DockerLabs\firsthacking\GitHub\images\explotacion-02.png)
+![explotacion-02.png](.\images\explotacion-02.png)
 
 ```bash
 msfconsole
@@ -61,7 +61,7 @@ exploit
 
 Al correr con éxito ganamos acceso a la shell, por lo que procedemos a validar el nivel de acceso, confirmando que tenemos acceso como root, que el usuario pertenece al grupo de root, validamos el directorio de trabajo actual, el cual corresponde al servicio comprometido y listamos todos todo el directorio raíz incluyendo ocultos en busca de algo mas interesante.
 
-![explotacion-03.png](L:\DockerLabs\firsthacking\GitHub\images\explotacion-03.png)
+![explotacion-03.png](.\images\explotacion-03.png)
 
 ---
 
